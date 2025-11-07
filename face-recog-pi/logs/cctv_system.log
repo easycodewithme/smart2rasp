@@ -1,0 +1,858 @@
+2025-11-07 12:52:38,639 - __main__ - INFO - ============================================================
+2025-11-07 12:52:38,639 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 12:52:38,639 - __main__ - INFO - ============================================================
+2025-11-07 12:52:38,640 - __main__ - INFO - Server will be accessible at:
+2025-11-07 12:52:38,640 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 12:52:38,640 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 12:52:38,641 - __main__ - INFO - 
+2025-11-07 12:52:38,641 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 12:52:38,641 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 12:52:38,641 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 12:52:38,641 - __main__ - INFO - 
+2025-11-07 12:52:38,641 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 12:52:38,641 - __main__ - INFO - ============================================================
+2025-11-07 12:52:39,311 - watchfiles.main - INFO - 4 changes detected
+2025-11-07 12:52:39,966 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:40,321 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:40,681 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:41,093 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:41,501 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:41,908 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:42,263 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:42,621 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:42,980 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:43,339 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:43,751 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:44,158 - watchfiles.main - INFO - 5 changes detected
+2025-11-07 12:52:44,382 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 12:52:44,516 - watchfiles.main - INFO - 10 changes detected
+2025-11-07 12:52:44,873 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:45,280 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:45,687 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:46,051 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:46,461 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:46,867 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:47,273 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:47,565 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 12:52:47,565 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 12:52:47,579 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 12:52:47,581 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 12:52:47,582 - detection_engine - INFO - Worker 0 started
+2025-11-07 12:52:47,583 - detection_engine - INFO - Worker 1 started
+2025-11-07 12:52:47,584 - detection_engine - INFO - Worker 2 started
+2025-11-07 12:52:47,584 - detection_engine - INFO - Worker 3 started
+2025-11-07 12:52:47,585 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 12:52:47,585 - api_server - INFO - System started successfully
+2025-11-07 12:52:47,679 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:48,087 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:48,491 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:48,899 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:49,318 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:49,684 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:50,044 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:50,401 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:50,760 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:51,120 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:51,478 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:51,838 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:52,197 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:52,558 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:52,919 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:53,275 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:53,634 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:53,998 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:54,355 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:54,713 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:55,121 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:55,527 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:55,946 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:56,303 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:56,663 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:57,023 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:57,379 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:57,741 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:58,094 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:58,456 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:58,811 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:59,172 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:59,532 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:52:59,905 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:00,264 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:00,624 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:01,036 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:01,393 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:01,749 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:02,111 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:02,468 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:02,826 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:03,187 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:03,596 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:03,952 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:04,310 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:04,668 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:05,026 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:05,384 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:05,744 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:06,102 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:06,460 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:06,819 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:07,176 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:07,540 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:07,898 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:08,261 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:08,668 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:09,021 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:09,378 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:09,761 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:10,127 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:10,484 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:10,850 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:11,219 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:11,580 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:11,940 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:12,299 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:12,656 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:13,014 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:13,378 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:13,737 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:14,096 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:14,456 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:14,812 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:15,171 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:15,532 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:15,890 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:16,299 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:53:16,655 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:24,402 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:24,754 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:25,163 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:25,569 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:25,975 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:26,343 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:26,753 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:27,158 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:27,563 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:27,970 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:28,424 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:28,825 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:29,231 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:29,635 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:29,993 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:30,351 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:30,714 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:31,074 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:31,435 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:31,797 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:32,153 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:32,513 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:55:36,022 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 12:55:36,022 - camera_manager - INFO - Stopped all cameras
+2025-11-07 12:56:25,098 - __main__ - INFO - ============================================================
+2025-11-07 12:56:25,099 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 12:56:25,099 - __main__ - INFO - ============================================================
+2025-11-07 12:56:25,099 - __main__ - INFO - Server will be accessible at:
+2025-11-07 12:56:25,100 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 12:56:25,100 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 12:56:25,100 - __main__ - INFO - 
+2025-11-07 12:56:25,100 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 12:56:25,100 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 12:56:25,100 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 12:56:25,101 - __main__ - INFO - 
+2025-11-07 12:56:25,101 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 12:56:25,101 - __main__ - INFO - ============================================================
+2025-11-07 12:56:26,383 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 12:56:28,333 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 12:56:28,333 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 12:56:28,352 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 12:56:28,352 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 12:56:28,354 - detection_engine - INFO - Worker 0 started
+2025-11-07 12:56:28,354 - detection_engine - INFO - Worker 1 started
+2025-11-07 12:56:28,356 - detection_engine - INFO - Worker 2 started
+2025-11-07 12:56:28,356 - detection_engine - INFO - Worker 3 started
+2025-11-07 12:56:28,358 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 12:56:28,358 - api_server - INFO - System started successfully
+2025-11-07 12:56:52,019 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:52,376 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:52,736 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:53,095 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:53,455 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:53,814 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:54,225 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:54,634 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:55,038 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:55,444 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:55,948 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:56,310 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:56,720 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:57,129 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:57,531 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:57,940 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:58,359 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:56:58,610 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 12:56:58,611 - camera_manager - INFO - Stopped all cameras
+2025-11-07 12:56:58,656 - detection_engine - INFO - Detection engine stopped
+2025-11-07 12:56:58,657 - api_server - INFO - System shutdown complete
+2025-11-07 12:59:16,457 - __main__ - INFO - ============================================================
+2025-11-07 12:59:16,458 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 12:59:16,458 - __main__ - INFO - ============================================================
+2025-11-07 12:59:16,459 - __main__ - INFO - Server will be accessible at:
+2025-11-07 12:59:16,459 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 12:59:16,459 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 12:59:16,459 - __main__ - INFO - 
+2025-11-07 12:59:16,459 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 12:59:16,459 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 12:59:16,460 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 12:59:16,460 - __main__ - INFO - 
+2025-11-07 12:59:16,460 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 12:59:16,460 - __main__ - INFO - ============================================================
+2025-11-07 12:59:16,917 - watchfiles.main - INFO - 5 changes detected
+2025-11-07 12:59:17,583 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:17,710 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 12:59:17,940 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:18,352 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:18,757 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:19,162 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:19,565 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:19,971 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:20,327 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:20,338 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 12:59:20,338 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 12:59:20,362 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 12:59:20,363 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 12:59:20,364 - detection_engine - INFO - Worker 0 started
+2025-11-07 12:59:20,365 - detection_engine - INFO - Worker 1 started
+2025-11-07 12:59:20,367 - detection_engine - INFO - Worker 2 started
+2025-11-07 12:59:20,368 - detection_engine - INFO - Worker 3 started
+2025-11-07 12:59:20,369 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 12:59:20,370 - api_server - INFO - System started successfully
+2025-11-07 12:59:20,740 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:21,097 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:21,455 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:21,487 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 12:59:21,812 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:22,169 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:22,527 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:22,884 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:23,244 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:23,600 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:23,964 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:24,322 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:24,679 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:25,038 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:25,448 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:25,854 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:26,211 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:26,569 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:26,928 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:27,287 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:27,646 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:28,002 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:28,412 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:28,818 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:29,224 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:29,629 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:29,983 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:30,342 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:30,702 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:31,061 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:31,419 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:31,777 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:32,185 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:32,541 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:32,898 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:33,260 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:33,618 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:33,976 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:34,336 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:34,694 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:35,052 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:35,413 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:35,770 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:36,126 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:36,485 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:36,843 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:37,202 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:37,556 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:37,913 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:38,269 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:38,628 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:38,988 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:39,345 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:39,700 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:40,062 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:40,420 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:40,779 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:41,138 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:41,495 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:41,855 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:42,264 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:42,674 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:43,078 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:43,487 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:43,844 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:44,203 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:44,562 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:44,920 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:45,275 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:45,634 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:46,045 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:46,451 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:46,856 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:47,261 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:47,615 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:47,975 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:48,334 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:48,694 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:49,052 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:49,407 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:49,764 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:50,121 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:50,478 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:50,839 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:51,202 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:51,558 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:51,920 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:52,332 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:52,693 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:53,052 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:53,407 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:53,767 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:54,124 - camera_manager - INFO - Started all cameras
+2025-11-07 12:59:54,127 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:54,484 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:54,845 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:55,206 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:55,561 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:55,919 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:56,280 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:56,641 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:57,001 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:57,411 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:57,767 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:58,124 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:58,481 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:58,840 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:59,200 - watchfiles.main - INFO - 1 change detected
+2025-11-07 12:59:59,609 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:00:00,017 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:00:00,371 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:00:00,729 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:00:01,322 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:00:01,323 - camera_manager - INFO - Stopped all cameras
+2025-11-07 13:00:01,798 - detection_engine - INFO - Detection engine stopped
+2025-11-07 13:00:01,798 - api_server - INFO - System shutdown complete
+2025-11-07 13:06:25,643 - __main__ - INFO - ============================================================
+2025-11-07 13:06:25,643 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:06:25,643 - __main__ - INFO - ============================================================
+2025-11-07 13:06:25,643 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:06:25,644 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:06:25,644 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:06:25,644 - __main__ - INFO - 
+2025-11-07 13:06:25,644 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:06:25,644 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:06:25,644 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:06:25,644 - __main__ - INFO - 
+2025-11-07 13:06:25,644 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:06:25,644 - __main__ - INFO - ============================================================
+2025-11-07 13:06:26,750 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:06:28,540 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:06:28,540 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:06:28,560 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:06:28,561 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 13:06:28,561 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:06:28,563 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:06:28,564 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:06:28,564 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:06:28,565 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:06:28,565 - api_server - INFO - System started successfully
+2025-11-07 13:06:34,416 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:07:04,484 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:07:04,541 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:07:17,126 - camera_manager - INFO - Added camera: anshul (ID: 1)
+2025-11-07 13:07:17,189 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:26,157 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:26,159 - camera_manager - INFO - Started camera stream: anshul
+2025-11-07 13:07:26,160 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:26,235 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:29,795 - camera_manager - INFO - Stopped camera stream: anshul
+2025-11-07 13:07:29,887 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:31,725 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:31,725 - camera_manager - INFO - Started camera stream: anshul
+2025-11-07 13:07:31,727 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:31,805 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:36,760 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:36,762 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:36,845 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:41,786 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:41,787 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:41,897 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:46,811 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:46,811 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:46,899 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:51,824 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:51,824 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:51,891 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:07:56,847 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:07:56,847 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:07:56,941 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:01,860 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:01,860 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:01,950 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:06,879 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:06,879 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:06,946 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:11,898 - camera_manager - INFO - Stopped camera stream: anshul
+2025-11-07 13:08:11,996 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:13,742 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:13,742 - camera_manager - INFO - Started camera stream: anshul
+2025-11-07 13:08:13,742 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:13,818 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:18,757 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:18,757 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:18,819 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:23,775 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:23,775 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:23,859 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:28,791 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:28,792 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:28,861 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:33,803 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:33,803 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:33,909 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:38,828 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:38,828 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:38,903 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:43,850 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:43,850 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:43,949 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:48,873 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:48,875 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:48,951 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:53,887 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:53,889 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:53,958 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:08:58,905 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:08:58,906 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:08:58,962 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:08:59,322 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:03,994 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:03,995 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:04,129 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:09,073 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:09,074 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:09,141 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:09:09,500 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:14,151 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:14,151 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:14,249 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:19,172 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:19,174 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:19,318 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:24,267 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:24,324 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:24,501 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:29,432 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:29,432 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:29,576 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:34,512 - camera_manager - INFO - Connecting to anshul at 8080
+2025-11-07 13:09:34,513 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:09:34,581 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:09:38,404 - camera_manager - INFO - Stopped camera stream: anshul
+2025-11-07 13:09:38,463 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:09:38,477 - camera_manager - INFO - Removed camera: anshul (ID: 1)
+2025-11-07 13:09:38,817 - watchfiles.main - INFO - 4 changes detected
+2025-11-07 13:10:36,688 - camera_manager - INFO - Added camera: anshul (ID: 2)
+2025-11-07 13:10:36,752 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:10:42,951 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:10:42,952 - camera_manager - INFO - Started camera stream: anshul
+2025-11-07 13:10:44,612 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:10:44,703 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:10:49,625 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:10:49,961 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:10:50,108 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:10:55,044 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:10:55,387 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:10:55,736 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:00,459 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:00,789 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:00,919 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:05,865 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:06,380 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:06,542 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:11,464 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:11,800 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:11,905 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:16,810 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:17,400 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:17,551 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:22,460 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:22,763 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:22,914 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:26,223 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:26,640 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:27,046 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:27,451 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:27,846 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:27,857 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:28,262 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:28,280 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:28,617 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:28,975 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:29,382 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:29,739 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:30,099 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:30,455 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:30,812 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:31,526 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:31,891 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:32,249 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:33,363 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:33,806 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:33,933 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:38,891 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:39,247 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:39,584 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:44,258 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:44,578 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:44,636 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:11:44,997 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:49,650 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:50,044 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:50,105 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:11:55,056 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:11:55,742 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:11:55,866 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:00,815 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:01,174 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:01,523 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:06,251 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:06,748 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:06,803 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:12:07,159 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:11,827 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:12,241 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:12,315 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:17,253 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:23,175 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:23,325 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:28,233 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:28,994 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:29,135 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:34,039 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:34,447 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:34,777 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:39,465 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:39,794 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:39,849 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:12:40,208 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:44,871 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:45,343 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:45,475 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:50,389 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:50,671 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:50,817 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:12:55,747 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:12:56,084 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:12:56,211 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:01,159 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:09,127 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:09,280 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:14,206 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:22,060 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:22,207 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:27,138 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:34,030 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:34,083 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:13:34,443 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:39,103 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:44,946 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:45,081 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:50,025 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:50,386 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:50,443 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:13:50,810 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:13:55,469 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:13:55,796 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:13:55,925 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:00,880 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:01,507 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:01,654 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:06,587 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:06,959 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:07,309 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:11,988 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:12,399 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:12,553 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:17,471 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:17,762 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:17,814 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:14:18,170 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:22,819 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:23,403 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:23,536 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:28,485 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:29,067 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:29,176 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:34,089 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:34,377 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:34,462 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:39,396 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:39,670 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:14:39,726 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:14:40,090 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:14:44,746 - camera_manager - INFO - Connecting to anshul at https://10.194.14.129:8080
+2025-11-07 13:14:52,482 - api_server - INFO - WebSocket disconnected. Total connections: 0
+2025-11-07 13:15:10,419 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:16:26,606 - __main__ - INFO - ============================================================
+2025-11-07 13:16:26,606 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:16:26,606 - __main__ - INFO - ============================================================
+2025-11-07 13:16:26,606 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:16:26,606 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:16:26,607 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:16:26,607 - __main__ - INFO - 
+2025-11-07 13:16:26,607 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:16:26,607 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:16:26,607 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:16:26,608 - __main__ - INFO - 
+2025-11-07 13:16:26,608 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:16:26,608 - __main__ - INFO - ============================================================
+2025-11-07 13:16:28,668 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:16:33,236 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:16:33,238 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:16:33,257 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:16:33,257 - camera_manager - INFO - Added camera: anshul (ID: 2)
+2025-11-07 13:16:33,259 - camera_manager - INFO - Loaded 1 cameras from database
+2025-11-07 13:16:33,260 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:16:33,260 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:16:33,260 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:16:33,262 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:16:33,263 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:16:33,263 - api_server - INFO - System started successfully
+2025-11-07 13:16:34,505 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:16:34,974 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:16:36,533 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:16:50,826 - camera_manager - INFO - Stopped camera stream: anshul
+2025-11-07 13:16:50,842 - camera_manager - INFO - Removed camera: anshul (ID: 2)
+2025-11-07 13:16:50,905 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:17:19,182 - camera_manager - INFO - Added camera: anshul (ID: 3)
+2025-11-07 13:17:19,254 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:17:22,238 - camera_manager - INFO - Connecting to anshul at rtsp://10.194.14.129:8554/stream
+2025-11-07 13:17:22,238 - camera_manager - INFO - Started camera stream: anshul
+2025-11-07 13:17:59,531 - camera_manager - ERROR - Failed to open camera anshul
+2025-11-07 13:17:59,676 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:18:04,620 - camera_manager - INFO - Connecting to anshul at rtsp://10.194.14.129:8554/stream
+2025-11-07 13:18:15,624 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:24:46,000 - __main__ - INFO - ============================================================
+2025-11-07 13:24:46,002 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:24:46,002 - __main__ - INFO - ============================================================
+2025-11-07 13:24:46,002 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:24:46,002 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:24:46,002 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:24:46,003 - __main__ - INFO - 
+2025-11-07 13:24:46,003 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:24:46,003 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:24:46,004 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:24:46,004 - __main__ - INFO - 
+2025-11-07 13:24:46,004 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:24:46,004 - __main__ - INFO - ============================================================
+2025-11-07 13:24:46,718 - watchfiles.main - INFO - 5 changes detected
+2025-11-07 13:24:50,774 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:24:50,782 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:24:50,782 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:24:50,816 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:24:50,818 - camera_manager - INFO - Added camera: anshul (ID: 3)
+2025-11-07 13:24:50,819 - camera_manager - INFO - Loaded 1 cameras from database
+2025-11-07 13:24:50,819 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:24:50,820 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:24:50,821 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:24:50,822 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:24:50,826 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:24:50,826 - api_server - INFO - System started successfully
+2025-11-07 13:24:52,836 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:25:12,778 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:25:13,004 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:25:16,801 - api_server - INFO - WebSocket disconnected. Total connections: 0
+2025-11-07 13:25:30,064 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:30,428 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:32,051 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:34,073 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:36,104 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:38,860 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:40,081 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:42,213 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:44,037 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:46,115 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:25:47,447 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:25:57,062 - camera_manager - WARNING - Camera 4 not found
+2025-11-07 13:26:02,607 - camera_manager - WARNING - Camera 4 not found
+2025-11-07 13:26:09,526 - api_server - INFO - WebSocket disconnected. Total connections: 0
+2025-11-07 13:26:17,105 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:18,922 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:21,014 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:22,753 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:24,834 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:26,802 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:28,876 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:30,970 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:32,836 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:34,810 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:36,833 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:40,130 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:26:43,080 - camera_manager - WARNING - Camera 4 not found
+2025-11-07 13:26:43,174 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:45,640 - camera_manager - WARNING - Camera 5 not found
+2025-11-07 13:26:45,692 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:26:46,055 - watchfiles.main - INFO - 3 changes detected
+2025-11-07 13:26:49,255 - camera_manager - INFO - Stopped camera stream: anshul
+2025-11-07 13:26:49,316 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:26:49,329 - camera_manager - INFO - Removed camera: anshul (ID: 3)
+2025-11-07 13:26:49,668 - watchfiles.main - INFO - 4 changes detected
+2025-11-07 13:27:37,610 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:27:37,610 - camera_manager - INFO - Stopped all cameras
+2025-11-07 13:27:38,580 - detection_engine - INFO - Detection engine stopped
+2025-11-07 13:27:38,580 - api_server - INFO - System shutdown complete
+2025-11-07 13:29:01,895 - __main__ - INFO - ============================================================
+2025-11-07 13:29:01,896 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:29:01,896 - __main__ - INFO - ============================================================
+2025-11-07 13:29:01,896 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:29:01,896 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:29:01,897 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:29:01,897 - __main__ - INFO - 
+2025-11-07 13:29:01,897 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:29:01,898 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:29:01,898 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:29:01,898 - __main__ - INFO - 
+2025-11-07 13:29:01,898 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:29:01,898 - __main__ - INFO - ============================================================
+2025-11-07 13:29:06,209 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:29:06,215 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:29:06,215 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:29:06,238 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:29:06,239 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 13:29:06,240 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:29:06,242 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:29:06,243 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:29:06,246 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:29:06,247 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:29:06,248 - api_server - INFO - System started successfully
+2025-11-07 13:29:06,620 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:30:35,851 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:36,309 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:36,673 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:37,032 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:37,393 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:37,752 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:38,112 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:38,469 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:38,879 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:39,281 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:39,690 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:40,145 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:40,511 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:40,868 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:30:41,262 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:30:41,263 - camera_manager - INFO - Stopped all cameras
+2025-11-07 13:30:42,197 - detection_engine - INFO - Detection engine stopped
+2025-11-07 13:30:42,199 - api_server - INFO - System shutdown complete
+2025-11-07 13:32:34,649 - __main__ - INFO - ============================================================
+2025-11-07 13:32:34,650 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:32:34,650 - __main__ - INFO - ============================================================
+2025-11-07 13:32:34,650 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:32:34,650 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:32:34,650 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:32:34,651 - __main__ - INFO - 
+2025-11-07 13:32:34,651 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:32:34,651 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:32:34,651 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:32:34,651 - __main__ - INFO - 
+2025-11-07 13:32:34,651 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:32:34,652 - __main__ - INFO - ============================================================
+2025-11-07 13:32:38,515 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:32:38,520 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:32:38,521 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:32:38,543 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:32:38,544 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 13:32:38,544 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:32:38,546 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:32:38,546 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:32:38,547 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:32:38,548 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:32:38,548 - api_server - INFO - System started successfully
+2025-11-07 13:32:39,077 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:32:48,483 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:32:49,107 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:32:51,576 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:32:57,568 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:34:46,948 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:34:50,965 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:35:08,001 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:35:12,002 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:36:55,325 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:55,843 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:56,200 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:56,569 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:56,934 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:57,292 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:57,651 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:58,009 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:58,394 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:58,755 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:59,112 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:59,473 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:36:59,831 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:37:00,192 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:37:00,549 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:37:01,199 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:37:01,199 - camera_manager - INFO - Stopped all cameras
+2025-11-07 13:37:01,448 - detection_engine - INFO - Detection engine stopped
+2025-11-07 13:37:01,449 - api_server - INFO - System shutdown complete
+2025-11-07 13:39:51,996 - __main__ - INFO - ============================================================
+2025-11-07 13:39:51,997 - __main__ - INFO - Starting Multi-Camera CCTV System
+2025-11-07 13:39:51,997 - __main__ - INFO - ============================================================
+2025-11-07 13:39:51,997 - __main__ - INFO - Server will be accessible at:
+2025-11-07 13:39:51,998 - __main__ - INFO -   - Local: http://localhost:8000
+2025-11-07 13:39:51,998 - __main__ - INFO -   - Network: http://<your-ip>:8000
+2025-11-07 13:39:51,998 - __main__ - INFO - 
+2025-11-07 13:39:51,998 - __main__ - INFO - To access from mobile devices on the same network:
+2025-11-07 13:39:51,998 - __main__ - INFO -   1. Find your computer's IP address
+2025-11-07 13:39:51,998 - __main__ - INFO -   2. Open browser on mobile and go to http://<your-ip>:8000
+2025-11-07 13:39:51,998 - __main__ - INFO - 
+2025-11-07 13:39:51,999 - __main__ - INFO - Press Ctrl+C to stop the server
+2025-11-07 13:39:51,999 - __main__ - INFO - ============================================================
+2025-11-07 13:39:55,987 - camera_manager - INFO - Camera Manager initialized
+2025-11-07 13:39:55,993 - detection_engine - INFO - Loaded 17 people, 37 encodings
+2025-11-07 13:39:55,993 - detection_engine - INFO - Detection Engine initialized
+2025-11-07 13:39:56,016 - api_server - INFO - Starting Multi-Camera CCTV System...
+2025-11-07 13:39:56,016 - camera_manager - INFO - Loaded 0 cameras from database
+2025-11-07 13:39:56,017 - detection_engine - INFO - Worker 0 started
+2025-11-07 13:39:56,017 - detection_engine - INFO - Worker 1 started
+2025-11-07 13:39:56,018 - detection_engine - INFO - Worker 2 started
+2025-11-07 13:39:56,018 - detection_engine - INFO - Worker 3 started
+2025-11-07 13:39:56,020 - detection_engine - INFO - Detection engine started with 4 workers
+2025-11-07 13:39:56,020 - api_server - INFO - System started successfully
+2025-11-07 13:39:57,285 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:40:04,562 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:40:14,614 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:43:52,243 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:43:59,932 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:46:07,963 - api_server - INFO - WebSocket disconnected. Total connections: 0
+2025-11-07 13:46:08,653 - api_server - INFO - WebSocket connected. Total connections: 1
+2025-11-07 13:46:15,986 - api_server - INFO - WebSocket connected. Total connections: 2
+2025-11-07 13:46:22,042 - api_server - INFO - WebSocket disconnected. Total connections: 1
+2025-11-07 13:48:36,526 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:37,892 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:38,249 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:38,659 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:39,026 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:39,437 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:39,843 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:40,248 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:40,655 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:41,061 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:41,413 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:41,772 - watchfiles.main - INFO - 1 change detected
+2025-11-07 13:48:43,229 - api_server - INFO - WebSocket disconnected. Total connections: 0
+2025-11-07 13:48:43,260 - api_server - INFO - Shutting down Multi-Camera CCTV System...
+2025-11-07 13:48:43,260 - camera_manager - INFO - Stopped all cameras
+2025-11-07 13:48:44,261 - detection_engine - INFO - Detection engine stopped
+2025-11-07 13:48:44,262 - api_server - INFO - System shutdown complete

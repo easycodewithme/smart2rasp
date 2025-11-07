@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Camera Access - CCTV System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .device-info {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        .camera-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #videoElement {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .alert-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.9);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 2em;
+            font-weight: bold;
+            z-index: 1000;
+            animation: pulse 1s infinite;
+            text-align: center;
+            border: 4px solid #fff;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #4CAF50;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #45a049;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background: #da190b;
+        }
+
+        .btn-secondary {
+            background: #2196F3;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #0b7dda;
+        }
+
+        .btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .status {
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .status-info {
+            background: rgba(33, 150, 243, 0.3);
+            border-left: 4px solid #2196F3;
+        }
+
+        .status-success {
+            background: rgba(76, 175, 80, 0.3);
+            border-left: 4px solid #4CAF50;
+        }
+
+        .status-error {
+            background: rgba(244, 67, 54, 0.3);
+            border-left: 4px solid #f44336;
+        }
+
+        .detections {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .detection-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .detection-item.threat {
+            background: rgba(255, 0, 0, 0.3);
+            border-left: 4px solid #ff0000;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .detection-time {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        .camera-select {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .camera-select select {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .info-box {
+            background: rgba(33, 150, 243, 0.2);
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📹 Smart CCTV - Direct Camera Access</h1>
+            <div class="device-info">
+                <span id="deviceType">Loading device info...</span>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>ℹ️ How it works:</strong> This system uses your device's camera directly. 
+            Click "Start Camera" to begin monitoring. Face detection runs in real-time on this device.
+        </div>
+
+        <div class="camera-section">
+            <h2 style="text-align: center; margin-bottom: 20px;">Live Camera Feed</h2>
+            
+            <div class="camera-select">
+                <label for="cameraSelector">Select Camera: </label>
+                <select id="cameraSelector">
+                    <option value="">Loading cameras...</option>
+                </select>
+            </div>
+
+            <div id="statusMessage" class="status status-info">
+                Click "Start Camera" to begin monitoring
+            </div>
+
+            <div class="video-container">
+                <video id="videoElement" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">📹 Start Camera</button>
+                <button id="stopBtn" class="btn btn-danger" disabled>⏹️ Stop Camera</button>
+                <button id="switchBtn" class="btn btn-secondary" disabled>🔄 Switch Camera</button>
+                <button id="dashboardBtn" class="btn btn-secondary">🏠 Go to Dashboard</button>
+            </div>
+        </div>
+
+        <div class="detections">
+            <h3>Recent Detections on This Device</h3>
+            <div id="detectionsList">
+                <p style="text-align: center; opacity: 0.7;">No detections yet. Start the camera to begin monitoring.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let videoElement = document.getElementById('videoElement');
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let stream = null;
+        let detectionInterval = null;
+        let availableCameras = [];
+        let currentCameraIndex = 0;
+        let deviceId = null;
+
+        // Detect device type
+        function detectDevice() {
+            const ua = navigator.userAgent;
+            let deviceType = 'Desktop';
+            
+            if (/mobile/i.test(ua)) {
+                deviceType = 'Mobile';
+            } else if (/tablet/i.test(ua)) {
+                deviceType = 'Tablet';
+            }
+            
+            const os = /Android/i.test(ua) ? 'Android' : 
+                       /iPhone|iPad|iPod/i.test(ua) ? 'iOS' : 
+                       /Windows/i.test(ua) ? 'Windows' : 
+                       /Mac/i.test(ua) ? 'macOS' : 'Unknown';
+            
+            document.getElementById('deviceType').textContent = 
+                `Device: ${deviceType} | OS: ${os} | Browser: ${getBrowser()}`;
+        }
+
+        function getBrowser() {
+            const ua = navigator.userAgent;
+            if (ua.indexOf('Chrome') > -1) return 'Chrome';
+            if (ua.indexOf('Safari') > -1) return 'Safari';
+            if (ua.indexOf('Firefox') > -1) return 'Firefox';
+            if (ua.indexOf('Edge') > -1) return 'Edge';
+            return 'Unknown';
+        }
+
+        // Get available cameras
+        async function getCameras() {
+            try {
+                const devices = await navigator.mediaDevices.enumerateDevices();
+                availableCameras = devices.filter(device => device.kind === 'videoinput');
+                
+                const selector = document.getElementById('cameraSelector');
+                selector.innerHTML = '';
+                
+                if (availableCameras.length === 0) {
+                    selector.innerHTML = '<option>No cameras found</option>';
+                    return;
+                }
+                
+                availableCameras.forEach((camera, index) => {
+                    const option = document.createElement('option');
+                    option.value = camera.deviceId;
+                    option.textContent = camera.label || `Camera ${index + 1}`;
+                    selector.appendChild(option);
+                });
+                
+                selector.addEventListener('change', function() {
+                    if (stream) {
+                        stopCamera();
+                        setTimeout(startCamera, 500);
+                    }
+                });
+                
+            } catch (error) {
+                console.error('Error getting cameras:', error);
+                updateStatus('Error accessing cameras', 'error');
+            }
+        }
+
+        // Start camera
+        async function startCamera() {
+            try {
+                // Check if mediaDevices is supported
+                if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                    updateStatus('Error: Camera access not supported on this browser. Try Chrome or Safari.', 'error');
+                    return;
+                }
+
+                const selector = document.getElementById('cameraSelector');
+                deviceId = selector.value || availableCameras[currentCameraIndex]?.deviceId;
+                
+                // Try with different constraints for better compatibility
+                let constraints = {
+                    video: {
+                        facingMode: 'user',
+                        width: { ideal: 1280 },
+                        height: { ideal: 720 }
+                    },
+                    audio: false
+                };
+
+                // If specific device selected, use it
+                if (deviceId) {
+                    constraints.video = {
+                        deviceId: { exact: deviceId },
+                        width: { ideal: 1280 },
+                        height: { ideal: 720 }
+                    };
+                }
+
+                updateStatus('Requesting camera access...', 'info');
+
+                stream = await navigator.mediaDevices.getUserMedia(constraints);
+                videoElement.srcObject = stream;
+                
+                // Set canvas size
+                videoElement.onloadedmetadata = () => {
+                    canvas.width = videoElement.videoWidth;
+                    canvas.height = videoElement.videoHeight;
+                };
+
+                updateStatus('Camera active - Monitoring for faces...', 'success');
+                
+                document.getElementById('startBtn').disabled = true;
+                document.getElementById('stopBtn').disabled = false;
+                document.getElementById('switchBtn').disabled = availableCameras.length <= 1;
+
+                // Start face detection
+                startDetection();
+                
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+                let errorMsg = 'Error accessing camera. ';
+                
+                if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+                    errorMsg += 'Camera permission denied. Please allow camera access in browser settings.';
+                } else if (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError') {
+                    errorMsg += 'No camera found on this device.';
+                } else if (error.name === 'NotReadableError' || error.name === 'TrackStartError') {
+                    errorMsg += 'Camera is already in use by another application.';
+                } else if (error.name === 'OverconstrainedError') {
+                    errorMsg += 'Camera does not support the requested settings.';
+                } else if (error.name === 'SecurityError') {
+                    errorMsg += 'Camera access blocked. Please use HTTPS or localhost.';
+                } else {
+                    errorMsg += error.message;
+                }
+                
+                updateStatus(errorMsg, 'error');
+            }
+        }
+
+        // Stop camera
+        function stopCamera() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                stream = null;
+                videoElement.srcObject = null;
+            }
+            
+            if (detectionInterval) {
+                clearInterval(detectionInterval);
+                detectionInterval = null;
+            }
+
+            updateStatus('Camera stopped', 'info');
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('switchBtn').disabled = true;
+        }
+
+        // Switch camera
+        function switchCamera() {
+            currentCameraIndex = (currentCameraIndex + 1) % availableCameras.length;
+            const selector = document.getElementById('cameraSelector');
+            selector.selectedIndex = currentCameraIndex;
+            
+            stopCamera();
+            setTimeout(startCamera, 500);
+        }
+
+        // Start face detection
+        function startDetection() {
+            detectionInterval = setInterval(async () => {
+                if (!stream) return;
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Capture frame from video
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = videoElement.videoWidth;
+                tempCanvas.height = videoElement.videoHeight;
+                const tempCtx = tempCanvas.getContext('2d');
+                tempCtx.drawImage(videoElement, 0, 0);
+                
+                // Convert to blob and send to server
+                tempCanvas.toBlob(async (blob) => {
+                    try {
+                        const formData = new FormData();
+                        formData.append('frame', blob, 'frame.jpg');
+                        formData.append('device_id', deviceId || 'unknown');
+                        formData.append('device_type', document.getElementById('deviceType').textContent);
+                        
+                        const response = await fetch('/api/detect-frame', {
+                            method: 'POST',
+                            body: formData
+                        });
+                        
+                        if (response.ok) {
+                            const result = await response.json();
+                            
+                            // Clear previous alert
+                            const existingAlert = document.querySelector('.alert-overlay');
+                            if (existingAlert) existingAlert.remove();
+                            
+                            if (result.detections && result.detections.length > 0) {
+                                updateDetections(result.detections);
+                                
+                                // Draw red boxes and show alert
+                                drawDetectionBoxes(result.face_locations, result.detections);
+                                showThreatAlert(result.detections);
+                            }
+                        }
+                    } catch (error) {
+                        console.error('Detection error:', error);
+                    }
+                }, 'image/jpeg', 0.8);
+                
+            }, 2000); // Process every 2 seconds
+        }
+        
+        // Draw red boxes around detected faces
+        function drawDetectionBoxes(faceLocations, detections) {
+            if (!faceLocations || faceLocations.length === 0) return;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const scaleX = canvas.width / videoElement.videoWidth;
+            const scaleY = canvas.height / videoElement.videoHeight;
+            
+            faceLocations.forEach((loc, index) => {
+                const [top, right, bottom, left] = loc;
+                
+                // Scale coordinates
+                const x = left * scaleX;
+                const y = top * scaleY;
+                const width = (right - left) * scaleX;
+                const height = (bottom - top) * scaleY;
+                
+                // Draw red box
+                ctx.strokeStyle = '#ff0000';
+                ctx.lineWidth = 4;
+                ctx.strokeRect(x, y, width, height);
+                
+                // Draw name label
+                if (detections[index]) {
+                    const name = detections[index].name;
+                    ctx.fillStyle = '#ff0000';
+                    ctx.fillRect(x, y - 30, width, 30);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = 'bold 20px Arial';
+                    ctx.fillText(name, x + 5, y - 8);
+                }
+            });
+        }
+        
+        // Show threat alert overlay
+        function showThreatAlert(detections) {
+            const videoContainer = document.querySelector('.video-container');
+            
+            // Remove existing alert
+            const existingAlert = videoContainer.querySelector('.alert-overlay');
+            if (existingAlert) existingAlert.remove();
+            
+            // Create alert overlay
+            const alert = document.createElement('div');
+            alert.className = 'alert-overlay';
+            
+            if (detections.length === 1) {
+                alert.innerHTML = `🚨 THREAT DETECTED<br>${detections[0].name.toUpperCase()}`;
+            } else {
+                alert.innerHTML = `🚨 ${detections.length} THREATS DETECTED`;
+            }
+            
+            videoContainer.appendChild(alert);
+            
+            // Remove alert after 3 seconds
+            setTimeout(() => {
+                if (alert.parentNode) {
+                    alert.remove();
+                }
+            }, 3000);
+        }
+
+        // Update detections display
+        function updateDetections(detections) {
+            const list = document.getElementById('detectionsList');
+            
+            detections.forEach(det => {
+                const item = document.createElement('div');
+                item.className = 'detection-item threat';
+                item.innerHTML = `
+                    <div>
+                        <strong style="color: #ff0000;">🚨 ${det.name.toUpperCase()}</strong> - Confidence: ${(det.confidence * 100).toFixed(1)}%
+                    </div>
+                    <div class="detection-time">${new Date().toLocaleTimeString()}</div>
+                `;
+                list.insertBefore(item, list.firstChild);
+                
+                // Keep only last 10 detections
+                while (list.children.length > 10) {
+                    list.removeChild(list.lastChild);
+                }
+            });
+        }
+
+        // Update status message
+        function updateStatus(message, type) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.textContent = message;
+            statusEl.className = `status status-${type}`;
+        }
+
+        // Event listeners
+        document.getElementById('startBtn').addEventListener('click', startCamera);
+        document.getElementById('stopBtn').addEventListener('click', stopCamera);
+        document.getElementById('switchBtn').addEventListener('click', switchCamera);
+        document.getElementById('dashboardBtn').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+
+        // Initialize
+        detectDevice();
+        getCameras();
+
+        // Request camera permissions on mobile
+        if (/mobile/i.test(navigator.userAgent)) {
+            updateStatus('Tap "Start Camera" to begin. You may need to allow camera access.', 'info');
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            stopCamera();
+        });
+    </script>
+</body>
+</html>

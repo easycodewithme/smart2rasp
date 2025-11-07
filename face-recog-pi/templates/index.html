@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Camera CCTV System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎥 Multi-Camera CCTV System</h1>
+            <div class="status-bar" id="statusBar">
+                <div class="status-item"><strong id="activeCameras">0</strong> Active Cameras</div>
+                <div class="status-item"><strong id="totalDetections">0</strong> Total Detections</div>
+                <div class="status-item"><strong id="totalAlerts">0</strong> Alerts</div>
+                <div class="status-item"><strong id="watchlistCount">0</strong> Watchlist</div>
+            </div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('cameras')">📹 Cameras</button>
+            <button class="tab" onclick="switchTab('alerts')">🚨 Alerts</button>
+            <button class="tab" onclick="switchTab('detections')">👤 Detections</button>
+            <button class="tab" onclick="switchTab('watchlist')">⚠️ Watchlist</button>
+            <button class="tab" onclick="switchTab('system')">⚙️ System</button>
+        </div>
+
+        <div id="cameras" class="tab-content active">
+            <div style="background: rgba(76, 175, 80, 0.2); border-left: 4px solid #4CAF50; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+                <strong>📱 NEW: Use Your Device Camera!</strong><br>
+                No IP cameras? No problem! Click below to use your phone or laptop camera directly.
+                <br><br>
+                <button class="btn btn-primary" onclick="window.location.href='/camera'" style="margin-top: 10px;">
+                    📹 Use My Device Camera
+                </button>
+            </div>
+            <div class="tab-header">
+                <h2>IP Camera Feeds (Advanced)</h2>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="showAddCameraModal()">➕ Add IP Camera</button>
+                    <button class="btn btn-secondary" onclick="startAllCameras()">▶️ Start All</button>
+                    <button class="btn btn-danger" onclick="stopAllCameras()">⏹️ Stop All</button>
+                </div>
+            </div>
+            <div id="cameraGrid" class="camera-grid"><div class="loading">Loading cameras...</div></div>
+        </div>
+
+        <div id="alerts" class="tab-content">
+            <h2>Recent Alerts</h2>
+            <div id="alertsList"><div class="loading">Loading alerts...</div></div>
+        </div>
+
+        <div id="detections" class="tab-content">
+            <h2>Recent Detections</h2>
+            <div class="table-container">
+                <table id="detectionsTable">
+                    <thead><tr><th>Time</th><th>Camera</th><th>Person</th><th>Confidence</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="watchlist" class="tab-content">
+            <div class="tab-header">
+                <h2>Watchlist</h2>
+                <button class="btn btn-primary" onclick="showAddWatchlistModal()">➕ Add to Watchlist</button>
+            </div>
+            <div class="table-container">
+                <table id="watchlistTable">
+                    <thead><tr><th>Name</th><th>Threat Level</th><th>Description</th><th>Added</th><th>Actions</th></tr></thead>
+                    <tbody><tr><td colspan="5" class="loading">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="system" class="tab-content">
+            <h2>System Status</h2>
+            <div id="systemStats"><div class="loading">Loading...</div></div>
+        </div>
+    </div>
+
+    <div id="addCameraModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Camera</h2>
+                <button class="modal-close" onclick="closeModal('addCameraModal')">&times;</button>
+            </div>
+            <form onsubmit="addCamera(event)">
+                <div class="form-group">
+                    <label>Camera Name *</label>
+                    <input type="text" id="cameraName" required placeholder="e.g., Front Entrance">
+                </div>
+                <div class="form-group">
+                    <label>Stream URL *</label>
+                    <input type="text" id="cameraUrl" required placeholder="rtsp://... or 0 for webcam">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="cameraLocation" placeholder="e.g., Building A">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Add Camera</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addWatchlistModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add to Watchlist</h2>
+                <button class="modal-close" onclick="closeModal('addWatchlistModal')">&times;</button>
+            </div>
+            <form onsubmit="addToWatchlist(event)">
+                <div class="form-group">
+                    <label>Person Name *</label>
+                    <input type="text" id="watchlistName" required>
+                </div>
+                <div class="form-group">
+                    <label>Threat Level *</label>
+                    <select id="watchlistThreat" required>
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="watchlistDesc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Add to Watchlist</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
