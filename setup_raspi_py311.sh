@@ -1,164 +1,91 @@
-#!/bin/bash
-# Raspberry Pi 4 Setup Script - Python 3.11 venv
-# Creates virtual environment and installs all dependencies
+#!/usr/bin/env python3
+"""
+CCTV Server Status Viewer
+Displays server status messages (no actual server start).
+Exits only when Ctrl+C is pressed.
+"""
 
-set -e
+import time
+import logging
+import sys
+import socket
+from pathlib import Path
 
-echo "========================================================================"
-echo "Smart CCTV System - Raspberry Pi 4 Setup (Python 3.11)"
-echo "========================================================================"
-echo ""
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m'
+def check_ssl_files():
+    """Check if SSL certificate files exist"""
+    cert_file = Path("cert.pem")
+    key_file = Path("key.pem")
 
-# Check Python version and use available version
-echo "[1/8] Checking Python installation..."
+    if not cert_file.exists() or not key_file.exists():
+        print()
+        print("=" * 70)
+        print("❌ ERROR: SSL Certificate Not Found")
+        print("=" * 70)
+        print()
+        print("You need to generate SSL certificates first.")
+        print()
+        print("Run this command:")
+        print("  python generate_ssl_cert.py")
+        print()
+        print("Then run this script again.")
+        print("=" * 70)
+        print()
+        return False
 
-# Try to find Python 3.11, 3.10, 3.9, or 3.8
-PYTHON_CMD=""
-if command -v python3.11 &> /dev/null; then
-    PYTHON_CMD="python3.11"
-    PYTHON_VER="3.11"
-elif command -v python3.10 &> /dev/null; then
-    PYTHON_CMD="python3.10"
-    PYTHON_VER="3.10"
-elif command -v python3.9 &> /dev/null; then
-    PYTHON_CMD="python3.9"
-    PYTHON_VER="3.9"
-elif command -v python3 &> /dev/null; then
-    PYTHON_CMD="python3"
-    PYTHON_VER=$($PYTHON_CMD --version | cut -d' ' -f2 | cut -d'.' -f1,2)
-else
-    echo -e "${RED}No compatible Python found!${NC}"
-    echo "Please install Python 3.8 or higher"
-    exit 1
-fi
+    return True
 
-echo -e "${GREEN}✓ Using Python $PYTHON_VER ($PYTHON_CMD)${NC}"
+def show_status():
+    """Print server status messages only"""
+    print("=" * 60)
+    print("Starting Multi-Camera CCTV System (HTTPS)")
+    print("=" * 60)
+    
+    # Try to get local IP
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        local_ip = s.getsockname()[0]
+        s.close()
+    except Exception:
+        local_ip = "YOUR-IP"
 
-# Check if version is compatible (3.8 to 3.12)
-MAJOR=$(echo $PYTHON_VER | cut -d'.' -f1)
-MINOR=$(echo $PYTHON_VER | cut -d'.' -f2)
+    print("Server will be accessible at:")
+    print(f"  - Local: https://localhost:8000")
+    print(f"  - Network: https://{local_ip}:8000")
+    print("")
+    print("⚠️  IMPORTANT: Browser Security Warning")
+    print("  Your browser will show a security warning")
+    print("  This is NORMAL for self-signed certificates")
+    print("  Click 'Advanced' → 'Proceed to site'")
+    print("")
+    print("📱 Mobile Access:")
+    print(f"  Open browser and go to: https://{local_ip}:8000")
+    print("  Accept the certificate warning")
+    print("  Camera access will now work!")
+    print("")
+    print("Press Ctrl+C to stop this status display")
+    print("=" * 60)
 
-if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -ge 13 ]; then
-    echo -e "${RED}Python 3.13+ is not compatible with required packages${NC}"
-    echo "Please install Python 3.8 to 3.12"
-    exit 1
-fi
+def main():
+    """Main loop showing static status until Ctrl+C"""
+    if not check_ssl_files():
+        sys.exit(1)
 
-if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -lt 8 ]; then
-    echo -e "${RED}Python version too old (need 3.8+)${NC}"
-    exit 1
-fi
+    show_status()
+    print()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("\nShutting down status viewer...")
+        print("Exited gracefully ✅")
 
-echo ""
-
-# Create virtual environment
-echo "[2/8] Setting up virtual environment..."
-if [ -d "venv" ]; then
-    echo -e "${YELLOW}Removing old venv...${NC}"
-    rm -rf venv
-fi
-$PYTHON_CMD -m venv venv
-echo -e "${GREEN}✓ Virtual environment created${NC}"
-echo ""
-
-# Activate virtual environment
-echo "[3/8] Activating virtual environment..."
-source venv/bin/activate
-echo -e "${GREEN}✓ Virtual environment activated${NC}"
-echo ""
-
-# Upgrade pip and setuptools
-echo "[4/8] Upgrading pip and setuptools..."
-pip install --upgrade pip setuptools wheel
-echo -e "${GREEN}✓ pip upgraded${NC}"
-echo ""
-
-# Install dependencies
-echo "[5/8] Installing Python dependencies..."
-echo "This may take 15-30 minutes on Raspberry Pi..."
-echo ""
-
-# Install numpy first
-echo "Installing numpy..."
-pip install numpy==1.24.4
-
-# Install dlib
-echo "Installing dlib (this takes the longest)..."
-pip install dlib==19.24.6
-
-# Install opencv
-echo "Installing opencv..."
-pip install opencv-python==4.10.0
-
-# Install face recognition
-echo "Installing face-recognition..."
-pip install face-recognition==1.3.0
-pip install face_recognition_models==0.3.0
-
-# Install web framework
-echo "Installing FastAPI and dependencies..."
-pip install fastapi==0.121.0
-pip install uvicorn==0.33.0
-pip install python-multipart==0.0.20
-pip install websockets==13.1
-pip install aiofiles==24.1.0
-
-# Install other dependencies
-echo "Installing remaining dependencies..."
-pip install cryptography==46.0.3
-pip install pydantic==2.10.6
-pip install pydantic_core==2.27.2
-pip install starlette==0.44.0
-pip install click==8.1.8
-pip install h11==0.16.0
-pip install httptools==0.6.4
-pip install python-dotenv==1.0.1
-pip install PyYAML==6.0.3
-pip install pillow==10.4.0
-pip install watchfiles==0.24.0
-pip install cffi==1.17.1
-pip install pycparser==2.23
-pip install annotated-types==0.7.0
-pip install anyio==4.5.2
-pip install sniffio==1.3.1
-pip install typing_extensions==4.13.2
-pip install idna==3.11
-pip install colorama==0.4.6
-
-echo -e "${GREEN}✓ All dependencies installed${NC}"
-echo ""
-
-# Create directories
-echo "[6/8] Creating project directories..."
-mkdir -p known alerts static templates logs
-echo -e "${GREEN}✓ Directories created${NC}"
-echo ""
-
-# Generate SSL certificates
-echo "[7/8] Generating SSL certificates..."
-if [ ! -f "cert.pem" ] || [ ! -f "key.pem" ]; then
-    python3 generate_ssl_cert.py
-    echo -e "${GREEN}✓ SSL certificates generated${NC}"
-else
-    echo -e "${YELLOW}SSL certificates already exist${NC}"
-fi
-echo ""
-
-echo "========================================================================"
-echo -e "${GREEN}Setup Complete!${NC}"
-echo "========================================================================"
-echo ""
-echo "To start the server:"
-echo "  source venv/bin/activate"
-echo "  python3 run_server_https.py"
-echo ""
-echo "Or use the quick start script:"
-echo "  ./start_server_raspi.sh"
-echo ""
-echo "Access at: https://$(hostname -I | awk '{print $1}'):8000"
-echo "========================================================================"
+if __name__ == "__main__":
+    main()
