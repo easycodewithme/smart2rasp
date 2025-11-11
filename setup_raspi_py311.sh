@@ -14,38 +14,55 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m'
 
-# Check if Python 3.11 is available
-echo "[1/8] Checking Python 3.11..."
-if ! command -v python3.11 &> /dev/null; then
-    echo -e "${YELLOW}Python 3.11 not found. Installing...${NC}"
-    echo ""
-    
-    # Update package list
-    
-    
-    # Install Python 3.11
-    echo "Installing Python 3.11..."
-    sudo apt install -y python3.11 python3.11-venv python3.11-dev
-    
-    # Verify installation
-    if ! command -v python3.11 &> /dev/null; then
-        echo -e "${RED}Failed to install Python 3.11${NC}"
-        exit 1
-    fi
-    
-    echo -e "${GREEN}✓ Python 3.11 installed successfully${NC}"
+# Check Python version and use available version
+echo "[1/8] Checking Python installation..."
+
+# Try to find Python 3.11, 3.10, 3.9, or 3.8
+PYTHON_CMD=""
+if command -v python3.11 &> /dev/null; then
+    PYTHON_CMD="python3.11"
+    PYTHON_VER="3.11"
+elif command -v python3.10 &> /dev/null; then
+    PYTHON_CMD="python3.10"
+    PYTHON_VER="3.10"
+elif command -v python3.9 &> /dev/null; then
+    PYTHON_CMD="python3.9"
+    PYTHON_VER="3.9"
+elif command -v python3 &> /dev/null; then
+    PYTHON_CMD="python3"
+    PYTHON_VER=$($PYTHON_CMD --version | cut -d' ' -f2 | cut -d'.' -f1,2)
 else
-    echo -e "${GREEN}✓ Python 3.11 found${NC}"
+    echo -e "${RED}No compatible Python found!${NC}"
+    echo "Please install Python 3.8 or higher"
+    exit 1
 fi
+
+echo -e "${GREEN}✓ Using Python $PYTHON_VER ($PYTHON_CMD)${NC}"
+
+# Check if version is compatible (3.8 to 3.12)
+MAJOR=$(echo $PYTHON_VER | cut -d'.' -f1)
+MINOR=$(echo $PYTHON_VER | cut -d'.' -f2)
+
+if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -ge 13 ]; then
+    echo -e "${RED}Python 3.13+ is not compatible with required packages${NC}"
+    echo "Please install Python 3.8 to 3.12"
+    exit 1
+fi
+
+if [ "$MAJOR" -eq 3 ] && [ "$MINOR" -lt 8 ]; then
+    echo -e "${RED}Python version too old (need 3.8+)${NC}"
+    exit 1
+fi
+
 echo ""
 
-# Create virtual environment with Python 3.11
+# Create virtual environment
 echo "[2/8] Setting up virtual environment..."
 if [ -d "venv" ]; then
     echo -e "${YELLOW}Removing old venv...${NC}"
     rm -rf venv
 fi
-python3.11 -m venv venv
+$PYTHON_CMD -m venv venv
 echo -e "${GREEN}✓ Virtual environment created${NC}"
 echo ""
 
