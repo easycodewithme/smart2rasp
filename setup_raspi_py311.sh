@@ -1,6 +1,6 @@
 #!/bin/bash
-# Raspberry Pi 4 Setup Script - Python 3.11 specific
-# For Raspberry Pi OS with Python 3.13 default
+# Raspberry Pi 4 Setup Script - Python 3.11 venv
+# Creates virtual environment and installs all dependencies
 
 set -e
 
@@ -19,8 +19,8 @@ echo "[1/7] Checking Python 3.11..."
 if ! command -v python3.11 &> /dev/null; then
     echo -e "${RED}Python 3.11 not found!${NC}"
     echo ""
-    echo "Installing Python 3.11..."
-    echo "Run these commands:"
+    echo "Install Python 3.11:"
+    echo "  sudo apt update"
     echo "  sudo apt install -y python3.11 python3.11-venv python3.11-dev"
     echo ""
     exit 1
@@ -29,7 +29,7 @@ echo -e "${GREEN}✓ Python 3.11 found${NC}"
 echo ""
 
 # Create virtual environment with Python 3.11
-echo "[2/7] Setting up virtual environment with Python 3.11..."
+echo "[2/7] Setting up virtual environment..."
 if [ -d "venv" ]; then
     echo -e "${YELLOW}Removing old venv...${NC}"
     rm -rf venv
@@ -126,7 +126,7 @@ echo -e "${GREEN}Setup Complete!${NC}"
 echo "========================================================================"
 echo ""
 echo "To start the server:"
-echo "  source venv/bin/activate"
+echo "  conda activate face-recog"
 echo "  python3 run_server_https.py"
 echo ""
 echo "Or use the quick start script:"
